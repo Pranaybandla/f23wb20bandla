@@ -9,4 +9,9 @@ block content
 
     div(class="row")
       each f, index in university
-        div(class="col-sm-2" ) #{f.university_id}, #{f.university_name}, #{f.university_location}
+        div(class="col-sm-2", onclick=`buy(${index})` ) #{f.university_id}, #{f.university_name}, #{f.university_location}
+        script.
+          function buy(index)
+          {
+            alert(`you purchased Item: ${index+1}`)
+          }
